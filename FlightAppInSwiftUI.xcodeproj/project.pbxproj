@@ -22,6 +22,8 @@
 		C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDD29B9C97C00EA9120 /* SettingsView.swift */; };
 		C1037EE029B9C99500EA9120 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDF29B9C99500EA9120 /* LanguagesView.swift */; };
 		C1037EE329BB172D00EA9120 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1037EE229BB172D00EA9120 /* GoogleService-Info.plist */; };
+		C1037EE529BB21FE00EA9120 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EE429BB21FE00EA9120 /* AuthViewModel.swift */; };
+		C1037EE729BB288200EA9120 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EE629BB288200EA9120 /* StartView.swift */; };
 		C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */; };
 		C1B5304529B38E4C0034D645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304429B38E4C0034D645 /* Assets.xcassets */; };
 		C1B5304829B38E4C0034D645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304729B38E4C0034D645 /* Preview Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		C1037EDD29B9C97C00EA9120 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C1037EDF29B9C99500EA9120 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
 		C1037EE229BB172D00EA9120 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C1037EE429BB21FE00EA9120 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C1037EE629BB288200EA9120 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		C1B5303D29B38E4A0034D645 /* FlightAppInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightAppInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppInSwiftUIApp.swift; sourceTree = "<group>"; };
 		C1B5304429B38E4C0034D645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C1037EC529B5E27500EA9120 /* ContentView.swift */,
+				C1037EE629BB288200EA9120 /* StartView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 		C1037ECA29B5E33300EA9120 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				C1037EE429BB21FE00EA9120 /* AuthViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -516,7 +522,9 @@
 				C1037ED629B8D56800EA9120 /* iOSCheckboxToggleStyle.swift in Sources */,
 				C1037ECE29B75F0B00EA9120 /* RegistrationView.swift in Sources */,
 				C1037ED029B7874900EA9120 /* CustomTextField.swift in Sources */,
+				C1037EE529BB21FE00EA9120 /* AuthViewModel.swift in Sources */,
 				C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */,
+				C1037EE729BB288200EA9120 /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

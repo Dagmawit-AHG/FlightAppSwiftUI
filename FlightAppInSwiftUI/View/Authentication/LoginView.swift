@@ -15,6 +15,8 @@ struct LoginView: View {
     @State private var showForgotPassword = false
     @State private var showRegistrationView = false
     
+    @EnvironmentObject private var viewModel: AuthViewModel
+    
     var body: some View {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color(red: 0.55, green: 0.79, blue: 1.0, opacity: 1.0), Color(red: 0.89, green: 0.88, blue: 1.0, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
@@ -42,7 +44,9 @@ struct LoginView: View {
                     .padding(.leading, 30)
                     .toggleStyle(iOSCheckboxToggleStyle())
                             
-                    Button(action: { loginButtonPressed = true }, label: {
+                        Button(action: {
+                            viewModel.login(withEmail: email, password: password)
+                        }, label: {
                         Text("Sign In")
                         .font(.headline)
                         .fontWeight(.regular)

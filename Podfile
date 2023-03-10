@@ -7,6 +7,8 @@ target 'FlightAppInSwiftUI' do
 
   # Pods for FlightAppInSwiftUI
   pod 'Firebase'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
   target 'FlightAppInSwiftUITests' do
     inherit! :search_paths
