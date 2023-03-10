@@ -20,18 +20,18 @@ class AuthViewModel: ObservableObject {
     }
     
     func login(withEmail email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             if let error = error {
                 print("Login failed: \(error.localizedDescription)")
                 return
             }
             guard let user = result?.user else { return }
-            self.userSession = user
+            self?.userSession = user
         }
     }
     
     func register(withEmail email: String, password: String, fullname: String, phoneNumber: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -48,7 +48,7 @@ class AuthViewModel: ObservableObject {
             ]
             Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                 print("User data uploaded")
-                self.userSession = user
+                self?.userSession = user
             }
         }
     }
