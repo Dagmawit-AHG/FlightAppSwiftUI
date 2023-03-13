@@ -46,6 +46,7 @@ struct LoginView: View {
                             
                         Button(action: {
                             viewModel.login(withEmail: email, password: password)
+                            loginButtonPressed = true
                         }, label: {
                         Text("Sign In")
                         .font(.headline)
@@ -77,6 +78,7 @@ struct LoginView: View {
                         .padding(.bottom, 230)
                         NavigationLink("",destination: RegistrationView(), isActive: $showRegistrationView)
                     }
+                    NavigationLink("",destination: HomeView(), isActive: $loginButtonPressed)
                 }.padding(.top, 250)
                     .ignoresSafeArea()
             }

@@ -27,6 +27,7 @@ class AuthViewModel: ObservableObject {
             }
             guard let user = result?.user else { return }
             self?.userSession = user
+            print("Login successful")
         }
     }
     
