@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_FlightAppInSwiftUI_FlightAppInSwiftUIUITests : NSObject
+@end
+@implementation PodsDummy_Pods_FlightAppInSwiftUI_FlightAppInSwiftUIUITests
+@end

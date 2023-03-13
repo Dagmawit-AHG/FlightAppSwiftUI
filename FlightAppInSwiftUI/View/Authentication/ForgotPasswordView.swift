@@ -10,6 +10,9 @@ import SwiftUI
 struct ForgotPasswordView: View {
     @State private var email = ""
     @State private var confirmButtonPressed = false
+    
+    @EnvironmentObject private var viewModel: AuthViewModel
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color(red: 0.55, green: 0.79, blue: 1.0, opacity: 1.0), Color(red: 0.89, green: 0.88, blue: 1.0, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)

@@ -16,6 +16,8 @@ struct RegistrationView: View {
     @State private var createAccountPressed = false
     @State private var showLoginView = false
     
+    @EnvironmentObject private var viewModel: AuthViewModel
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color(red: 0.55, green: 0.79, blue: 1.0, opacity: 1.0), Color(red: 0.89, green: 0.88, blue: 1.0, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
@@ -55,7 +57,9 @@ struct RegistrationView: View {
                         }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding(.leading, 30)
                         .toggleStyle(iOSCheckboxToggleStyle())
-                    Button(action: { createAccountPressed = true }, label: {
+                    Button(action: {
+                        viewModel.register(withEmail: email, password: password, fullname: fullname,phoneNumber: phoneNumber)
+                    }, label: {
                         Text("Create Account")
                         .font(.headline)
                         .fontWeight(.regular)
