@@ -8,6 +8,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var flightType = 0
+    @State private var fromRoundTripText: String = String()
+    @State private var toRoundTripText: String = String()
     var body: some View {
         ZStack {
             Image("Start")
@@ -28,15 +30,29 @@ struct HomeView: View {
                             .padding(.top, 70)
                             .padding(15)
                         ScrollView {
-                            VStack {
+                            VStack(spacing: 30) {
                                 Picker("", selection: $flightType) {
                                     Text("Round Trip").tag(0)
                                     Text("One Way").tag(1)
                                 }.pickerStyle(.segmented)
+                                TextField("From",text: $fromRoundTripText)
+                                    .frame(height: 50)
+                                    .padding()
+                                    .border(.clear)
+                                    .overlay(RoundedRectangle(cornerRadius: 5)
+                                        .strokeBorder(Color.accentColor)
+                                    )
+                                TextField("To",text: $toRoundTripText)
+                                    .frame(height: 50)
+                                    .padding()
+                                    .border(.clear)
+                                    .overlay(RoundedRectangle(cornerRadius: 5)
+                                        .strokeBorder(Color.accentColor)
+                                    )
                                 
                             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                                 .padding(.top, 180)
-                                .padding(15)
+                                .padding(30)
                         }
                     }
                     
