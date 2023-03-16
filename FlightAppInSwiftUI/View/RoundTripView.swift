@@ -28,14 +28,14 @@ struct RoundTripView: View {
             ZStack {
                 Image(systemName: "airplane.arrival")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing).padding()
-                TextField("To",text: $fromRoundTripText)
+                TextField("To",text: $toRoundTripText)
                     .frame(height: 50)
                     .padding()
                     .border(.clear)
                     .overlay(RoundedRectangle(cornerRadius: 5)
                         .strokeBorder(Color.accentColor))
             }
-            HStack {
+                HStack(spacing: 30) {
                 ZStack {
                     Image(systemName: "calendar")
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
