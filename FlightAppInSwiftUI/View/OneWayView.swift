@@ -34,7 +34,6 @@ struct OneWayView: View {
                         .overlay(RoundedRectangle(cornerRadius: 5)
                             .strokeBorder(Color.accentColor))
                 }
-                HStack(spacing: 30) {
                     ZStack {
                         Image(systemName: "calendar")
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottom).padding(5)
@@ -43,7 +42,7 @@ struct OneWayView: View {
                             .padding()
                             .overlay(RoundedRectangle(cornerRadius: 5) .strokeBorder(Color.accentColor))
                     }
-                }
+                
             }
         }
     }

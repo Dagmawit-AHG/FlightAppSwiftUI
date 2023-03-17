@@ -41,9 +41,11 @@ struct RoundTripView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
                         .padding(5)
                     DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {                   }
-                        .frame(width: 110, height: 70)
+                        .frame(width: 130,height: 70)
+                        .padding(5)
                         .overlay(RoundedRectangle(cornerRadius: 5)
                             .strokeBorder(Color.accentColor))
+                        
                 }
                 ZStack {
                     Image(systemName: "calendar")
@@ -51,12 +53,13 @@ struct RoundTripView: View {
                         .padding(5)
                     DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {
                     }
-                    .frame(width: 110, height: 70)
+                    .frame(width: 130, height: 70)
+                    .padding(5)
                     .overlay(RoundedRectangle(cornerRadius: 5)
                         .strokeBorder(Color.accentColor))
                 }
-            }
-            }
+                }
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         }
     }
 }
