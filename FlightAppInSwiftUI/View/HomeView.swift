@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var selectedSegment = 0
+    private var roundTrip : some View = RoundTripView()
+    private var oneWay : some View = OneWayView()
     var body: some View {
         ZStack {
             Image("Start")
@@ -34,10 +36,11 @@ struct HomeView: View {
                                 Text("Round Trip").tag(0)
                                 Text("One Way").tag(1)
                             }.pickerStyle(.segmented)
-                                .onChange(of: selectedSegment) { s in
-                                    
-                                }
-                            RoundTripView()
+                            if selectedSegment == 0 {
+                                RoundTripView()
+                            } else {
+                                OneWayView()
+                            }
                         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                         .padding(.top, 180)
                         .padding(30)
