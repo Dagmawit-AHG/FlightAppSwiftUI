@@ -14,9 +14,10 @@ struct SettingsView: View {
     @State private var flightUpdatesIsOn = false
     @State private var executiveIsOn = false
     @State private var discountIsOn = false
+    @State private var hidden = true
     
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack(spacing:30) {
                 ZStack{
                     SettingsCardView(image: "character.bubble", title: "Language")
@@ -38,11 +39,19 @@ struct SettingsView: View {
                         ZStack {
                             Image("Rectangle_big")
                                 .resizable()
+                                .opacity(hidden ? 0 : 1)
                             ZStack{
                                 SettingsCardView(image: "bell", title: "Notifications")
                                 Toggle("", isOn: $notificationsIsOn)
                                     .toggleStyle(SwitchToggleStyle(tint: .black))
                                     .padding(.trailing, 30)
+                                    .onChange(of: notificationsIsOn) { newValue in
+                                        if newValue == true {
+                                            hidden = false
+                                        } else {
+                                            hidden = true
+                                        }
+                                    }
                             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
                             VStack(spacing: 40) {
                                 HStack {
@@ -75,6 +84,7 @@ struct SettingsView: View {
                                 }.frame(minWidth: 0, maxWidth: .infinity,alignment: .leading)
                                     .padding(.leading, 70)
                             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                                .opacity(hidden ? 0 : 1)
                         }
                     )
                     .clipped()
