@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct SettingsCardView: View {
+    let image: String
     var body: some View {
         Color.clear
             .overlay(
                 ZStack {
                     Image("CardView")
                     .resizable()
+                    Image(image)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
+                        .padding()
                 }
             )
             .clipped()
@@ -23,6 +27,6 @@ struct SettingsCardView: View {
 
 struct SettingsCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsCardView()
+        SettingsCardView(image: "tabler-icon-message-language")
     }
 }
