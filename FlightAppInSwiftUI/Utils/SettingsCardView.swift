@@ -15,7 +15,7 @@ struct SettingsCardView: View {
                 ZStack {
                     Image("CardView")
                     .resizable()
-                    Image(image)
+                    Image(systemName: image)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
                         .padding()
                 }
@@ -27,6 +27,6 @@ struct SettingsCardView: View {
 
 struct SettingsCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsCardView(image: "tabler-icon-message-language")
+        SettingsCardView(image: "character.bubble")
     }
 }
