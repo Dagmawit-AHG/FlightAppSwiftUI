@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SettingsCardView: View {
     var body: some View {
-        Text("Hello, World!")
+        Color.clear
+            .overlay(
+                ZStack {
+                    Image("CardView")
+                    .resizable()
+                }
+            )
+            .clipped()
+            .frame(width: 340, height: 98, alignment: .center)
     }
 }
 
