@@ -18,6 +18,7 @@
 		C1037EDC29B9C20300EA9120 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDB29B9C20300EA9120 /* HomeView.swift */; };
 		C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDD29B9C97C00EA9120 /* SettingsView.swift */; };
 		C1037EE029B9C99500EA9120 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDF29B9C99500EA9120 /* LanguagesView.swift */; };
+		C171968529C83B26003F3429 /* SettingsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968429C83B26003F3429 /* SettingsCardView.swift */; };
 		C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */; };
 		C1B5304529B38E4C0034D645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304429B38E4C0034D645 /* Assets.xcassets */; };
 		C1B5304829B38E4C0034D645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304729B38E4C0034D645 /* Preview Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		C1037EDB29B9C20300EA9120 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C1037EDD29B9C97C00EA9120 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C1037EDF29B9C99500EA9120 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		C171968429C83B26003F3429 /* SettingsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCardView.swift; sourceTree = "<group>"; };
 		C1B5303D29B38E4A0034D645 /* FlightAppInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightAppInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppInSwiftUIApp.swift; sourceTree = "<group>"; };
 		C1B5304429B38E4C0034D645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C1037ECF29B7874900EA9120 /* CustomTextField.swift */,
 				C1037ED129B8AEF000EA9120 /* CustomSecureTextField.swift */,
 				C1037ED529B8D56800EA9120 /* iOSCheckboxToggleStyle.swift */,
+				C171968429C83B26003F3429 /* SettingsCardView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				C1037EC629B5E27500EA9120 /* ContentView.swift in Sources */,
 				C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */,
 				C1037ED629B8D56800EA9120 /* iOSCheckboxToggleStyle.swift in Sources */,
+				C171968529C83B26003F3429 /* SettingsCardView.swift in Sources */,
 				C1037ECE29B75F0B00EA9120 /* RegistrationView.swift in Sources */,
 				C1037ED029B7874900EA9120 /* CustomTextField.swift in Sources */,
 				C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */,
