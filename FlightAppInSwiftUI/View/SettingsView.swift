@@ -15,6 +15,7 @@ struct SettingsView: View {
     @State private var executiveIsOn = false
     @State private var discountIsOn = false
     @State private var hidden = true
+    @State private var signOutPressed = false
     
     var body: some View {
         ScrollView {
@@ -91,6 +92,11 @@ struct SettingsView: View {
                     .frame(width: 340, height: 343)
                 
             }
+            Button("Sign out", action: { signOutPressed = true})
+                .font(.system(size: 18,weight: .medium))
+                .foregroundColor(Color.accentColor)
+                .padding(20)
+                .padding(.top, 30)
         }.padding()
     }
 }
