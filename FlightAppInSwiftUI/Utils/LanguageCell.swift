@@ -13,18 +13,20 @@ struct LanguageCell: View {
     let subtitle: String
     
     var body: some View {
-        HStack(spacing: 150) {
+        HStack {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.system(size: 18, weight: .medium))
                 Text(subtitle)
                     .font(.system(size: 14, weight: .light))
-            }
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity,alignment: .leading)
             Image(systemName: imageName)
                 .font(.title3)
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-        }
+                .frame(alignment: .trailing)
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing)
+            .padding(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
     }
 }
 
