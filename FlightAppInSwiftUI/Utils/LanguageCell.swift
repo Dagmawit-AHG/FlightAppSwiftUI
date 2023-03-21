@@ -13,7 +13,7 @@ struct LanguageCell: View {
     let subtitle: String
     
     var body: some View {
-        HStack(spacing: 100) {
+        HStack(spacing: 150) {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.system(size: 18, weight: .medium))
@@ -21,7 +21,7 @@ struct LanguageCell: View {
                     .font(.system(size: 14, weight: .light))
             }
             Image(systemName: imageName)
-                .font(.headline)
+                .font(.title3)
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
         }
