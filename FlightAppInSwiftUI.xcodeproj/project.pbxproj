@@ -20,6 +20,7 @@
 		C1037EE029B9C99500EA9120 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDF29B9C99500EA9120 /* LanguagesView.swift */; };
 		C171968729C9E161003F3429 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968629C9E161003F3429 /* LanguageCell.swift */; };
 		C171968929C9E56C003F3429 /* SuggestedLanguagesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968829C9E56C003F3429 /* SuggestedLanguagesTableView.swift */; };
+		C171968B29CAECF5003F3429 /* OtherLanguagesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968A29CAECF4003F3429 /* OtherLanguagesTableView.swift */; };
 		C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */; };
 		C1B5304529B38E4C0034D645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304429B38E4C0034D645 /* Assets.xcassets */; };
 		C1B5304829B38E4C0034D645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304729B38E4C0034D645 /* Preview Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		C1037EDF29B9C99500EA9120 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
 		C171968629C9E161003F3429 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		C171968829C9E56C003F3429 /* SuggestedLanguagesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedLanguagesTableView.swift; sourceTree = "<group>"; };
+		C171968A29CAECF4003F3429 /* OtherLanguagesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherLanguagesTableView.swift; sourceTree = "<group>"; };
 		C1B5303D29B38E4A0034D645 /* FlightAppInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightAppInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppInSwiftUIApp.swift; sourceTree = "<group>"; };
 		C1B5304429B38E4C0034D645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				C1037EDD29B9C97C00EA9120 /* SettingsView.swift */,
 				C1037EDF29B9C99500EA9120 /* LanguagesView.swift */,
 				C171968829C9E56C003F3429 /* SuggestedLanguagesTableView.swift */,
+				C171968A29CAECF4003F3429 /* OtherLanguagesTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C1037ECC29B7359200EA9120 /* LoginView.swift in Sources */,
 				C1037ED229B8AEF000EA9120 /* CustomSecureTextField.swift in Sources */,
 				C1037ED829B9B8CE00EA9120 /* ForgotPasswordView.swift in Sources */,
+				C171968B29CAECF5003F3429 /* OtherLanguagesTableView.swift in Sources */,
 				C1037EDC29B9C20300EA9120 /* HomeView.swift in Sources */,
 				C1037EDA29B9BECF00EA9120 /* VerificationCodeView.swift in Sources */,
 				C1037EC629B5E27500EA9120 /* ContentView.swift in Sources */,
