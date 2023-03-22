@@ -42,6 +42,13 @@ struct OtherLanguagesTableView: View {
                         .font(.system(size: 17, weight: .light))
                 }.background(.clear)
             }
+            VStack {
+                Image("Rectangle_other")
+                .resizable()
+                .cornerRadius(10)
+                .frame(width: 343, height: 424, alignment: .top)
+            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
+                .padding(.top,55)
         }
     }
 }

@@ -34,8 +34,6 @@ struct SuggestedLanguagesTableView: View {
                 Image("Rectangle_sugg")
                 .resizable()
                 .frame(width: 343, height: 213, alignment: .top)
-                
-//                .padding()
             Text("App will use the first language that it supports from Language & Region settings. You can select a different language for App to use if you prefer.")
                 .font(.system(size: 15, weight: .light))
                 .padding()
