@@ -7,8 +7,19 @@
 
 import SwiftUI
 
-struct LanguageCell: View {
-    let imageName: String
+struct LanguageCell: View, Hashable {
+    
+    static func == (lhs: LanguageCell, rhs: LanguageCell) -> Bool {
+        return lhs.imageName == rhs.imageName && lhs.title == rhs.title && lhs.subtitle == rhs.subtitle
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(imageName)
+        hasher.combine(title)
+        hasher.combine(subtitle)
+    }
+    
+    @State var imageName: String
     let title: String
     let subtitle: String
     
@@ -19,13 +30,15 @@ struct LanguageCell: View {
                     .font(.system(size: 18, weight: .medium))
                 Text(subtitle)
                     .font(.system(size: 14, weight: .light))
-            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity,alignment: .leading)
+            }.frame(alignment: .leading)
+            Spacer()
+            Spacer()
             Image(systemName: imageName)
                 .font(.title3)
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
                 .frame(alignment: .trailing)
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing)
+        }.frame( alignment: .trailing)
             .padding(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
     }
 }
