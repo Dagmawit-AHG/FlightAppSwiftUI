@@ -62,6 +62,14 @@ func modifyImage(image: Image, alignment: Alignment, padding: CGFloat) -> some V
     return image.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: alignment).padding(padding)
 }
 
+func modifyTextField<TextField: View>(textField: TextField) -> some View {
+    return textField.frame(height: 50)
+        .padding()
+        .border(.clear)
+        .overlay(RoundedRectangle(cornerRadius: 5)
+            .strokeBorder(Color.accentColor))
+}
+
 struct RoundTripView_Previews: PreviewProvider {
     static var previews: some View {
         RoundTripView()
