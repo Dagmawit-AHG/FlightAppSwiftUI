@@ -64,8 +64,8 @@ struct RoundTripView: View {
     }
 }
 
-func modifyImage(image: Image) -> some View {
-    return image.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing).padding()
+func modifyImage(image: Image, alignment: Alignment, padding: CGFloat) -> some View {
+    return image.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: alignment).padding(padding)
 }
 
 struct RoundTripView_Previews: PreviewProvider {
