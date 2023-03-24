@@ -36,7 +36,7 @@ struct RoundTripView: View {
                 HStack(spacing: 30) {
                 ZStack {
                     modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
-                    DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {                   }
+                    DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {}
                         .frame(width: 130,height: 70)
                         .padding(5)
                         .overlay(RoundedRectangle(cornerRadius: 5)
@@ -45,12 +45,11 @@ struct RoundTripView: View {
                 }
                 ZStack {
                     modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
-                    DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {
-                    }
-                    .frame(width: 130, height: 70)
-                    .padding(5)
-                    .overlay(RoundedRectangle(cornerRadius: 5)
-                        .strokeBorder(Color.accentColor))
+                    DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {}
+                        .frame(width: 130, height: 70)
+                        .padding(5)
+                        .overlay(RoundedRectangle(cornerRadius: 5)
+                            .strokeBorder(Color.accentColor))
                 }
                 }
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
@@ -66,6 +65,13 @@ func modifyTextField<TextField: View>(textField: TextField) -> some View {
     return textField.frame(height: 50)
         .padding()
         .border(.clear)
+        .overlay(RoundedRectangle(cornerRadius: 5)
+            .strokeBorder(Color.accentColor))
+}
+
+func modifyDatePicker<DatePicker: View>(datePicker: DatePicker) -> some View {
+    return datePicker.frame(width: 130, height: 70)
+        .padding(5)
         .overlay(RoundedRectangle(cornerRadius: 5)
             .strokeBorder(Color.accentColor))
 }
