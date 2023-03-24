@@ -16,8 +16,7 @@ struct RoundTripView: View {
         ScrollView {
             VStack (spacing: 30){
                 ZStack {
-                Image(systemName: "airplane.departure")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing).padding()
+                modifyImage(image: Image(systemName: "airplane.departure"), alignment: .trailing, padding: 16)
                 TextField("From",text: $fromRoundTripText)
                     .frame(height: 50)
                     .padding()
@@ -26,8 +25,7 @@ struct RoundTripView: View {
                         .strokeBorder(Color.accentColor))
             }
             ZStack {
-                Image(systemName: "airplane.arrival")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing).padding()
+                modifyImage(image: Image(systemName: "airplane.arrival"), alignment: .trailing, padding: 16)
                 TextField("To",text: $toRoundTripText)
                     .frame(height: 50)
                     .padding()
@@ -37,9 +35,7 @@ struct RoundTripView: View {
             }
                 HStack(spacing: 30) {
                 ZStack {
-                    Image(systemName: "calendar")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
-                        .padding(5)
+                    modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
                     DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {                   }
                         .frame(width: 130,height: 70)
                         .padding(5)
@@ -48,9 +44,7 @@ struct RoundTripView: View {
                         
                 }
                 ZStack {
-                    Image(systemName: "calendar")
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
-                        .padding(5)
+                    modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
                     DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {
                     }
                     .frame(width: 130, height: 70)
