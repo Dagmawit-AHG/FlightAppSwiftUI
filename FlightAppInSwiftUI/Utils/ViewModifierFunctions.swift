@@ -25,3 +25,9 @@ func modifyDatePicker<DatePicker: View>(datePicker: DatePicker) -> some View {
         .overlay(RoundedRectangle(cornerRadius: 5)
             .strokeBorder(Color.accentColor))
 }
+
+func modifyDatePickerForOneWay<DatePicker: View>(datePicker: DatePicker) -> some View {
+    return datePicker.frame(width: 110, height: 70)
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 5) .strokeBorder(Color.accentColor))
+}
