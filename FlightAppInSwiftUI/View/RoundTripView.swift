@@ -16,41 +16,23 @@ struct RoundTripView: View {
         ScrollView {
             VStack (spacing: 30){
                 ZStack {
-                modifyImage(image: Image(systemName: "airplane.departure"), alignment: .trailing, padding: 16)
-                TextField("From",text: $fromRoundTripText)
-                    .frame(height: 50)
-                    .padding()
-                    .border(.clear)
-                    .overlay(RoundedRectangle(cornerRadius: 5)
-                        .strokeBorder(Color.accentColor))
-            }
-            ZStack {
-                modifyImage(image: Image(systemName: "airplane.arrival"), alignment: .trailing, padding: 16)
-                TextField("To",text: $toRoundTripText)
-                    .frame(height: 50)
-                    .padding()
-                    .border(.clear)
-                    .overlay(RoundedRectangle(cornerRadius: 5)
-                        .strokeBorder(Color.accentColor))
-            }
+                    modifyImage(image: Image(systemName: "airplane.departure"), alignment: .trailing, padding: 16)
+                    modifyTextField(textField: TextField("From",text: $fromRoundTripText))
+                }
+                ZStack {
+                    modifyImage(image: Image(systemName: "airplane.arrival"), alignment: .trailing, padding: 16)
+                    modifyTextField(textField: TextField("To",text: $toRoundTripText))
+                }
                 HStack(spacing: 30) {
-                ZStack {
-                    modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
-                    DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {}
-                        .frame(width: 130,height: 70)
-                        .padding(5)
-                        .overlay(RoundedRectangle(cornerRadius: 5)
-                            .strokeBorder(Color.accentColor))
+                    ZStack {
+                        modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
+                        modifyDatePicker(datePicker: DatePicker(selection: $departureDate, in: ...Date.now, displayedComponents: .date) {})
                         
-                }
-                ZStack {
-                    modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
-                    DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {}
-                        .frame(width: 130, height: 70)
-                        .padding(5)
-                        .overlay(RoundedRectangle(cornerRadius: 5)
-                            .strokeBorder(Color.accentColor))
-                }
+                    }
+                    ZStack {
+                        modifyImage(image: Image(systemName: "calendar"), alignment: .bottomLeading, padding: 5)
+                        modifyDatePicker(datePicker: DatePicker(selection: $returnDate, in: ...Date.now, displayedComponents: .date) {})
+                    }
                 }
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         }
