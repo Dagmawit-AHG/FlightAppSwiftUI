@@ -64,6 +64,10 @@ struct RoundTripView: View {
     }
 }
 
+func modifyImage(image: Image) -> some View {
+    return image.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .trailing).padding()
+}
+
 struct RoundTripView_Previews: PreviewProvider {
     static var previews: some View {
         RoundTripView()
