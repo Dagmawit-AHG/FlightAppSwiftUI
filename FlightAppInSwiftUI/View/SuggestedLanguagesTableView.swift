@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SuggestedLanguagesTableView: View {
     @State private var selection: LanguageCell?
-    private var languages = [
+    @State private var languages = [
         LanguageCell(
             imageName: "checkmark",
             title: "English(US)",
@@ -27,13 +27,13 @@ struct SuggestedLanguagesTableView: View {
     
     var body: some View {
         ZStack {
-            List(languages, id: \.self) { index in
+            List($languages, id: \.self) { $index in
                 HStack {
                     index
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
-                    print(index)
+                    index.imageName = "checkmark"
                 }
             }
             .frame(width: 343, height: 260, alignment: .top)
@@ -46,7 +46,6 @@ struct SuggestedLanguagesTableView: View {
                 Text("App will use the first language that it supports from Language & Region settings. You can select a different language for App to use if you prefer.")
                     .font(.system(size: 15, weight: .light))
                     .padding()
-                
             }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             .padding(.top,34)

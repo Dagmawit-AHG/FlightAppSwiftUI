@@ -19,9 +19,9 @@ struct LanguageCell: View, Hashable {
         hasher.combine(subtitle)
     }
     
-    @State var imageName: String
-    let title: String
-    let subtitle: String
+    var imageName: String
+    var title: String
+    var subtitle: String
     
     var body: some View {
         HStack {
