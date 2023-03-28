@@ -9,6 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var settingsIconPressed = false
+    @State private var selectedSegment = 0
+    @State private var searchFlightPressed = false
+    private var roundTrip : some View = RoundTripView()
+    private var oneWay : some View = OneWayView()
+   
     var body: some View {
         NavigationView {
             ZStack {
@@ -40,10 +45,39 @@ struct HomeView: View {
                         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                             .padding(.top, 70)
                             .padding(15)
-                        ScrollView {
-                            
-                        }
-        
+
+                       ScrollView {
+                           VStack(spacing: 30) {
+                            Picker("",selection: $selectedSegment){
+                                Text("Round Trip").tag(0)
+                                Text("One Way").tag(1)
+                            }.pickerStyle(.segmented)
+                                   .padding(.bottom,20)
+                            if selectedSegment == 0 {
+                                RoundTripView()
+                            } else {
+                                OneWayView()
+                            }
+                        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                        .padding(.top, 180)
+                        .padding(30)
+                           Button(action: { searchFlightPressed = true }, label: {
+                               Text("Search Flights")
+                                   .font(.headline)
+                                   .fontWeight(.regular)
+                                   .foregroundColor(.white)
+                                   .frame(width: 315, height: 49)
+                                   .background(Color.accentColor)
+                                   .cornerRadius(5)
+                                   .overlay(
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .stroke(lineWidth: 1)
+                                        .foregroundColor(Color.accentColor)
+                                        .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                                   )
+                           })
+                           .padding(.top, 650)
+                       }
                     }
                     
                 )

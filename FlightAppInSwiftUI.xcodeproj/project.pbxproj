@@ -21,6 +21,9 @@
 		C1037EDC29B9C20300EA9120 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDB29B9C20300EA9120 /* HomeView.swift */; };
 		C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDD29B9C97C00EA9120 /* SettingsView.swift */; };
 		C1037EE029B9C99500EA9120 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EDF29B9C99500EA9120 /* LanguagesView.swift */; };
+		C1037EEB29C1C13500EA9120 /* RoundTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1037EEA29C1C13500EA9120 /* RoundTripView.swift */; };
+		C171968329C3153C003F3429 /* OneWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968229C3153C003F3429 /* OneWayView.swift */; };
+		C171968D29CDB145003F3429 /* ViewModifierFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171968C29CDB145003F3429 /* ViewModifierFunctions.swift */; };
 		C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */; };
 		C1B5304529B38E4C0034D645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304429B38E4C0034D645 /* Assets.xcassets */; };
 		C1B5304829B38E4C0034D645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B5304729B38E4C0034D645 /* Preview Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		C1037EDB29B9C20300EA9120 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C1037EDD29B9C97C00EA9120 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C1037EDF29B9C99500EA9120 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		C1037EEA29C1C13500EA9120 /* RoundTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripView.swift; sourceTree = "<group>"; };
+		C171968229C3153C003F3429 /* OneWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayView.swift; sourceTree = "<group>"; };
+		C171968C29CDB145003F3429 /* ViewModifierFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierFunctions.swift; sourceTree = "<group>"; };
 		C1B5303D29B38E4A0034D645 /* FlightAppInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightAppInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B5304029B38E4A0034D645 /* FlightAppInSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppInSwiftUIApp.swift; sourceTree = "<group>"; };
 		C1B5304429B38E4C0034D645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 				C1037ECF29B7874900EA9120 /* CustomTextField.swift */,
 				C1037ED129B8AEF000EA9120 /* CustomSecureTextField.swift */,
 				C1037ED529B8D56800EA9120 /* iOSCheckboxToggleStyle.swift */,
+				C171968C29CDB145003F3429 /* ViewModifierFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 				C1037EDB29B9C20300EA9120 /* HomeView.swift */,
 				C1037EDD29B9C97C00EA9120 /* SettingsView.swift */,
 				C1037EDF29B9C99500EA9120 /* LanguagesView.swift */,
+				C1037EEA29C1C13500EA9120 /* RoundTripView.swift */,
+				C171968229C3153C003F3429 /* OneWayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,14 +513,17 @@
 				C1037EE029B9C99500EA9120 /* LanguagesView.swift in Sources */,
 				C1037ECC29B7359200EA9120 /* LoginView.swift in Sources */,
 				C1037ED229B8AEF000EA9120 /* CustomSecureTextField.swift in Sources */,
+				C171968329C3153C003F3429 /* OneWayView.swift in Sources */,
 				C1037ED829B9B8CE00EA9120 /* ForgotPasswordView.swift in Sources */,
 				C1037EDC29B9C20300EA9120 /* HomeView.swift in Sources */,
 				C1037EDA29B9BECF00EA9120 /* VerificationCodeView.swift in Sources */,
 				C1037EC629B5E27500EA9120 /* ContentView.swift in Sources */,
 				C1B5304129B38E4A0034D645 /* FlightAppInSwiftUIApp.swift in Sources */,
+				C171968D29CDB145003F3429 /* ViewModifierFunctions.swift in Sources */,
 				C1037ED629B8D56800EA9120 /* iOSCheckboxToggleStyle.swift in Sources */,
 				C1037ECE29B75F0B00EA9120 /* RegistrationView.swift in Sources */,
 				C1037ED029B7874900EA9120 /* CustomTextField.swift in Sources */,
+				C1037EEB29C1C13500EA9120 /* RoundTripView.swift in Sources */,
 				C1037EDE29B9C97C00EA9120 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
