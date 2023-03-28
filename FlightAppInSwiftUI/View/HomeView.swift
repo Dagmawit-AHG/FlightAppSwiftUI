@@ -4,16 +4,20 @@
 //
 //  Created by Dagmawit Alemayehu on 09/03/2023.
 //
-
 import SwiftUI
 
 struct HomeView: View {
+    @State private var fromRoundTripText: String = String()
+    @State private var toRoundTripText: String = String()
+    @State private var departureDate = Date.now
+    @State private var returnDate = Date.now
+    @State private var searchFlightPressed = false
     @State private var settingsIconPressed = false
     @State private var selectedSegment = 0
     @State private var searchFlightPressed = false
     private var roundTrip : some View = RoundTripView()
     private var oneWay : some View = OneWayView()
-   
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -45,7 +49,6 @@ struct HomeView: View {
                         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                             .padding(.top, 70)
                             .padding(15)
-
                        ScrollView {
                            VStack(spacing: 30) {
                             Picker("",selection: $selectedSegment){
