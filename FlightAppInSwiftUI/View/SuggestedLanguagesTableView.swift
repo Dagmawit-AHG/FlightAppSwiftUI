@@ -33,6 +33,9 @@ struct SuggestedLanguagesTableView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
+                    languages[0].imageName = ""
+                    languages[1].imageName = ""
+                    languages[2].imageName = ""
                     index.imageName = "checkmark"
                 }
             }
