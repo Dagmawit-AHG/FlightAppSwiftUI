@@ -8,30 +8,44 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var settingsIconPressed = false
     @State private var selectedSegment = 0
     @State private var searchFlightPressed = false
     private var roundTrip : some View = RoundTripView()
     private var oneWay : some View = OneWayView()
+   
     var body: some View {
-        ZStack {
+        NavigationView {
+            ZStack {
+                Text("Content")
+                    .toolbar {
+                        Button(action: { settingsIconPressed = true }) {
+                            Image(systemName: "gearshape")
+                                .foregroundColor(.black)
+                                .font(.title2)
+                        }
+                    }
+                NavigationLink("", destination: SettingsView(), isActive: $settingsIconPressed)
             Image("Start")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
-                    ZStack {
+                    ZStack(alignment: .leading) {
+                        
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .fill(Color.white)
                         .padding(.top, 170)
-                        .ignoresSafeArea()
-                        VStack (alignment: .leading){
+                        VStack(alignment: .leading,spacing: 12) {
                             Text("Hello")
                             .font(.system(size: 28, weight: .medium))
+                            .frame(alignment: .leading)
                             Text("Plan your next travel")
                             .font(.system(size: 17, weight: .regular))
                         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                             .padding(.top, 70)
                             .padding(15)
+
                        ScrollView {
                            VStack(spacing: 30) {
                             Picker("",selection: $selectedSegment){
@@ -64,10 +78,11 @@ struct HomeView: View {
                            })
                            .padding(.top, 650)
                        }
-                            
                     }
                     
                 )
+        }
+            
         }
     }
 }
