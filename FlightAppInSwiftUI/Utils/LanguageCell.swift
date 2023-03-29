@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LanguageCell: View {
+struct LanguageCell: View, Hashable {
     let imageName: String
     let title: String
     let subtitle: String
